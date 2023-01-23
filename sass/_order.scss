@@ -1,0 +1,111 @@
+.order{
+    padding: 100px 0 45px;
+}
+.order__container{
+   @include flex(space-between, center)
+}
+.order__text{
+    width: 50%;
+    max-width: 565px;
+    text-align: center;
+    h2{
+        text-transform: uppercase;
+    }
+}
+.order-form{
+  @include flex(space-between, center);
+  input{
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: $gray;
+    border: 1px solid transparent;
+    outline: none;
+    height: 60px;
+    padding: 0 20px;
+    font-size: 14px;
+
+    &::placeholder{
+     color: $gray_op;
+    }
+    &:focus{
+        border: 1px solid $yellow;
+    }
+
+  }
+  .order__select{
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    position: relative;
+    &::after{
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 10px;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: url(../img/.svg) center no-repeat;
+        pointer-events: none;
+    }
+    select{
+        width: 100%;
+        background: $gray;
+        border: 1px solid transparent;
+        height: 60px;
+        padding: 0 20px;
+        font-size: 14px;
+        outline: none;
+        border-radius: 5px;
+        appearance: none;
+        &:not(:valid){
+            color: $gray_op;
+        }
+        &:focus{
+            border: 1px solid $yellow;
+        }
+    }
+    option{
+        color: $color;
+    }
+  }
+  button{
+    width: 100%;
+    background: $yellow;
+    cursor: pointer;
+    height: 60px;
+    border-radius: 5px;
+    color: $white;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    text-transform: uppercase;
+    transition: .3s;
+    &:hover{
+        background: darken($yellow, 10%);
+    }
+  }
+}
+.order__img{
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    .circle{
+        right: 0;
+        transform: translate(40%, -50%);
+    }
+    img{
+        @include img;
+    }
+}
+.order__contacts{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray_op;
+    text-align: center;
+    padding-top:45px;
+    a{
+        color: $gray_op;
+        font-weight: bold;
+    }
+}

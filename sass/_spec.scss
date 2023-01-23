@@ -1,0 +1,73 @@
+.spec__container{
+    position: relative;
+    h6{
+        text-transform: uppercase;
+        color: $white;
+        font-size: 12px;
+        line-height: 117%;  
+        text-align: center;
+        letter-spacing: 0.5em;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        top: 45px;
+    }
+}
+.spec__slide{
+    background: url(../img/bg-slider.png) center/cover no-repeat;
+    padding: 105px 0 95px;
+
+} 
+.spec__slid-container{
+    @include flex( space-between, center);
+}
+.spec__text{
+    color: $white;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    padding-left: 30px;
+}
+.spec__img{
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    text-align: right;
+    .circle{
+        left: 0;
+        transform: translate(-40%, -50%);
+    }
+    img{
+        @include img;
+    }
+}
+.spec__slider { 
+    max-width: 1400px;
+    overflow: hidden;
+}
+.spec__pagination{
+    @include flex (center, center);
+    position: relative;
+    width: 100%;
+    bottom: 45px;
+    z-index: 2;
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.5);
+        z-index: 2;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: .3s;
+        &:hover{
+            background: $white;
+        }
+    }
+    .swiper-pagination-bullet-active{
+        background: $white;
+    }
+}
+// .swiper-slide-next, .swiper-slide-duplicate, .swiper-slide-prev{
+//     visibility:collapse;
+//
