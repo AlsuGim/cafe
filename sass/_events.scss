@@ -1,0 +1,65 @@
+.events{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg-events.png) center/cover no-repeat;
+    padding: 45px 0;
+    h6{
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 12px;
+        letter-spacing: 0.5em;
+    }
+}
+.events__container{
+    @include flex( space-between, center);
+    margin: 45px auto;
+}
+.left__event{
+    position: relative;
+    .circle{
+        left: 0;
+        transform: translate(-40%, -50%);
+    }
+    .event__title{
+        right: 0;
+    }
+}
+.right__event{
+    position: relative;
+    .circle{
+        right: 0;
+        transform: translate(40%, -50%);
+    }
+    .event__title{
+        left: 0;
+        transform: scale(-1);
+    }
+}
+
+.event__title{
+    background: #000000;
+    border-radius: 0px 5px 5px 0px;
+    font-family: $kurale;
+    color: $white;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 30px 20px;
+    position: absolute;
+    writing-mode: vertical-lr;
+    top: 0;
+    height: 100%;
+
+}
+.left__event, .right__event{
+    img{
+        @include img;
+    }
+}
+
+.events__contact, .events__contact a{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    
+}
